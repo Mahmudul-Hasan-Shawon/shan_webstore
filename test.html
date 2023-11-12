@@ -48,9 +48,17 @@
 
                         <div class="mb-3">
                             <label for="platform" class="form-label">Platform:</label>
-                            <input type="text" class="form-control" id="platform" name="platform" placeholder="Windows"
-                                oninput="updateHTML()" value="">
+                            <select class="form-select" id="platform" name="platform" onchange="updateHTML()">
+                                <option value="Windows">Windows</option>
+                                <option value="iOS">iOS</option>
+                                <option value="Android">Android</option>
+                            </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="datepicker" class="form-label">Select a date:</label>
+                            <input type="date" class="form-control" id="datepicker" name="datepicker" onchange="updateHTML()">
+                        </div>
+                        
 
                         <div class="mb-3">
                             <label for="website" class="form-label">Website:</label>
@@ -77,7 +85,7 @@
                                 value="">
                         </div>
 
-                        <button type="button" class="btn btn-primary" onclick="generateHTML()">Generate HTML</button>
+                        <button type="button" class="bt" onclick="generateHTML()">Generate HTML</button>
                     </form>
 
                 </div>

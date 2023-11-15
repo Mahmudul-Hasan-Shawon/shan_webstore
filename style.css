@@ -39,7 +39,9 @@ body{
 
 
 
-
+.str{
+  font-size: 10px;
+}
 
 
 
@@ -62,12 +64,12 @@ body{
 
 
 .logo{
-  width: 70px;
+  width: 60px;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  
+
+
+ 
 }
 .logo:hover{
   width: 70px;
@@ -98,9 +100,9 @@ body{
   color: #ffffff;
 }
 .card-title{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: #32ff81;
+  color: #32ff9f;
   
 }
 

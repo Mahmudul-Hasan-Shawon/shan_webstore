@@ -20,12 +20,7 @@ body{
 
 .dropdown-menu {
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
-
 
 .dt-button-collection{
   border-radius: 20px;
@@ -154,6 +149,47 @@ a:hover{
 
 
 
+.dropdown-item{
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+}
+.dropdown-menu{
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.dropdown-menu:hover{
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+.dropdown-toggle{
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.dropdown-toggle:hover{
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
 
 
 .navbar-brand {
@@ -165,8 +201,7 @@ a:hover{
   }
   .dropdown-menu {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border: none;
-    border-radius: 0;
+   
     padding: 0.7em;
   }
   @media only screen and (min-width: 992px) {
@@ -238,7 +273,7 @@ a:hover{
   }
   
   .dropdown-menu li a {
-    color: gray;
+    color: rgb(0, 0, 0);
     padding: 0.5em 1em;
   }
   .dropdown-menu li:first-child a {

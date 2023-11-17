@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Generator</title>
+    <title>Template Generator</title>
     <link rel="stylesheet" href="test.css">
     <!-- Bootstrap CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xmTSAe6/1a6sJD9fVN8lU5KqyddcvPglFuY6T0J4vqE+Mo3cxSa7+XWns3Z2neuN/2g1PHgBg7jy3cRF4HIyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-xmTSAe6/1a6sJD9fVN8lU5KqyddcvPglFuY6T0J4vqE+Mo3cxSa7+XWns3Z2neuN/2g1PHgBg7jy3cRF4HIyA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="template.css">
+        <link rel="icon" href="./images/icon.png" type="image/x-icon" />
 
     <style>
         pre {
@@ -21,14 +25,9 @@
 
 <body class="container-fluid p-0">
     <div class="container-fluid na">
-        <div class="text-center">
+        <div class="text-center ">
             <div class="container pt-0 pb-0 my-2 d-flex">
-                <div class="">
-                    <button type="button" class="bt" onclick="generateHTML()">Generate HTML</button>
-                </div>
-                <div class="px-4">
-                    <button type="button" class="bt" onclick="copyToClipboard()">Copy HTML</button>
-                </div>
+                <h4>Template Generator</h4>                
             </div>
         </div>
     </div>
@@ -40,17 +39,21 @@
                     <form id="htmlForm" class="mb-4 pt-5" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="iconPath" class="form-label">Icon Path:</label>
-                            <input type="file" class="form-control" id="iconPath" name="iconPath" onchange="updateHTML()">
+                            <input type="file" class="form-control" id="iconPath" name="iconPath"
+                                onchange="updateHTML()">
                         </div>
 
                         <div class="mb-3">
                             <label for="appName" class="form-label">App Name:</label>
-                            <input type="text" class="form-control" id="appName" name="appName" placeholder="SHELL" oninput="updateHTML()" value="">
+                            <input type="text" class="form-control" id="appName" name="appName" placeholder="SHELL"
+                                oninput="updateHTML()" value="">
                         </div>
 
                         <div class="mb-3">
                             <label for="description" class="form-label">Description:</label>
-                            <input type="text" class="form-control" id="description" name="description" placeholder="Powerful context menu manager for Windows File Explorer" oninput="updateHTML()" value="">
+                            <input type="text" class="form-control" id="description" name="description"
+                                placeholder="Powerful context menu manager for Windows File Explorer"
+                                oninput="updateHTML()" value="">
                         </div>
 
                         <div class="mb-3">
@@ -64,51 +67,91 @@
 
                         <div class="mb-3">
                             <label for="datepicker" class="form-label">Select a date:</label>
-                            <input type="date" class="form-control" id="datepicker" name="datepicker" onchange="updateHTML()">
+                            <input type="date" class="form-control" id="datepicker" name="datepicker"
+                                onchange="updateHTML()">
                         </div>
 
                         <div class="mb-3">
                             <label for="website" class="form-label">Website:</label>
-                            <input type="url" class="form-control" id="website" name="website" placeholder="https://nilesoft.org/" oninput="updateHTML()" value="">
+                            <input type="url" class="form-control" id="website" name="website"
+                                placeholder="https://nilesoft.org/" oninput="updateHTML()" value="">
                         </div>
 
                         <div class="mb-3">
                             <label for="websiteDisplay" class="form-label">Website Display:</label>
-                            <input type="text" class="form-control" id="websiteDisplay" name="websiteDisplay" placeholder="nilesoft.org" oninput="updateHTML()" value="">
+                            <input type="text" class="form-control" id="websiteDisplay" name="websiteDisplay"
+                                placeholder="nilesoft.org" oninput="updateHTML()" value="">
                         </div>
 
                         <div class="mb-3">
                             <label for="version" class="form-label">Size:</label>
-                            <input type="text" class="form-control" id="version" name="version" placeholder="1.9" oninput="updateHTML()" value="">
+                            <input type="text" class="form-control" id="version" name="version" placeholder="1.9"
+                                oninput="updateHTML()" value="">
                         </div>
 
                         <div class="mb-3">
                             <label for="downloadLink" class="form-label">Download Link:</label>
-                            <input type="url" class="form-control" id="downloadLink" name="downloadLink" placeholder="https://nilesoft.org/download/shell/1.9/setup.exe" oninput="updateHTML()" value="">
+                            <input type="url" class="form-control" id="downloadLink" name="downloadLink"
+                                placeholder="https://nilesoft.org/download/shell/1.9/setup.exe" oninput="updateHTML()"
+                                value="">
                         </div>
                     </form>
                 </div>
 
-                <div class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="col-12 overview">
+                <div class="col-6 ov">
+                    <div class="card card2">
+                        <div class="card-body p-5">
+                            <div class="col-12">
+                            <!-- <div class="col-12 overview"> -->
                                 <div id="userInput">
                                     <ul class="list-group">
-                                        <li class="list-group-item"><strong class="st">Icon Path:</strong> <span id="userIconPath"></span></li>
-                                        <li class="list-group-item"><strong class="st">App Name:</strong> <span id="userAppName">SHELL</span></li>
-                                        <li class="list-group-item"><strong class="st">Description:</strong> <span id="userDescription">Powerful context menu manager for Windows File Explorer</span></li>
-                                        <li class="list-group-item"><strong class="st">Platform:</strong> <span id="userPlatform">Windows</span></li>
-                                        <li class="list-group-item"><strong class="st">Date:</strong> <span id="userDate"></span></li>
-                                        <li class="list-group-item"><strong class="st">Website:</strong> <span id="userWebsite">https://nilesoft.org/</span></li>
-                                        <li class="list-group-item"><strong class="st">Website Display:</strong> <span id="userWebsiteDisplay">nilesoft.org</span></li>
-                                        <li class="list-group-item"><strong class="st">Version:</strong> <span id="userVersion">1.9</span></li>
-                                        <li class="list-group-item"><strong class="st">Download Link:</strong> <span id="userDownloadLink">https://nilesoft.org/download/shell/1.9/setup.exe</span></li>
+                                        <li class="list-group-item"><strong class="st">Icon Path:</strong> <span
+                                                id="userIconPath"></span></li>
+                                        <li class="list-group-item"><strong class="st">App Name:</strong> <span
+                                                id="userAppName">SHELL</span></li>
+                                        <li class="list-group-item"><strong class="st">Description:</strong> <span
+                                                id="userDescription">Powerful context menu manager for Windows File
+                                                Explorer</span></li>
+                                        <li class="list-group-item"><strong class="st">Platform:</strong> <span
+                                                id="userPlatform">Windows</span></li>
+                                        <li class="list-group-item"><strong class="st">Date:</strong> <span
+                                                id="userDate"></span></li>
+                                        <li class="list-group-item"><strong class="st">Website:</strong> <span
+                                                id="userWebsite">https://nilesoft.org/</span></li>
+                                        <li class="list-group-item"><strong class="st">Website Display:</strong> <span
+                                                id="userWebsiteDisplay">nilesoft.org</span></li>
+                                        <li class="list-group-item"><strong class="st">Version:</strong> <span
+                                                id="userVersion">1.9</span></li>
+                                        <li class="list-group-item"><strong class="st">Download Link:</strong> <span
+                                                id="userDownloadLink">https://nilesoft.org/download/shell/1.9/setup.exe</span>
+                                        </li>
                                     </ul>
 
                                     <div id="generatedHTML">
-                                        <h3 class="ghtml">Generated HTML</h3>
+                                                <h4 class="ghtml">Generated HTML </h4>
+                                        
+                                            
+                                        <div class="d-flex pb-5">
+                                            <div class="px-2">
+                                                <button type="button" class="bt" onclick="generateHTML()">Generate</button>
+                                            </div>
+    
+                                             
+                                            <div>
+                                                <button type="button" class="bt" onclick="copyToClipboard()"><i class="fa-regular fa-copy"></i> copy</button>  
+                                            </div>
+                                                
+
+                                        </div>
+                                        
+
+
+
+
+
+
                                         <pre id="htmlCode" class="border p-3"></pre>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +172,6 @@
             var userIconPathSpan = document.getElementById("userIconPath");
             // Display the selected file name
             userIconPathSpan.innerText = iconPathInput.files[0].name;
-    
             updateInputField("appName", "userAppName");
             updateInputField("description", "userDescription");
             updateInputField("platform", "userPlatform");
@@ -139,15 +181,18 @@
             updateInputField("version", "userVersion");
             updateInputField("downloadLink", "userDownloadLink");
         }
-    
+
         function updateInputField(inputFieldId, userInputId) {
             var inputField = document.getElementById(inputFieldId);
             var userInputElement = document.getElementById(userInputId);
-    
             if (inputField.type === "date") {
                 // For date input, format the date as "dd-MMM-yyyy"
                 var selectedDate = new Date(inputField.value);
-                var options = { day: 'numeric', month: 'short', year: 'numeric' };
+                var options = {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                };
                 var formattedDate = selectedDate.toLocaleDateString('en-US', options);
                 userInputElement.innerText = formattedDate;
             } else {
@@ -156,7 +201,7 @@
                 userInputElement.innerText = inputFieldValue;
             }
         }
-    
+
         function generateHTML() {
             updateHTML();
             var user_data = {
@@ -164,7 +209,11 @@
                 "app_name": document.getElementById("appName").value,
                 "description": document.getElementById("description").value,
                 "platform": document.getElementById("platform").value,
-                "datepicker": new Date(document.getElementById("datepicker").value).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }), // Format the date
+                "datepicker": new Date(document.getElementById("datepicker").value).toLocaleDateString('en-US', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                }), // Format the date
                 "website": document.getElementById("website").value,
                 "website_display": document.getElementById("websiteDisplay").value,
                 "version": document.getElementById("version").value,
@@ -212,7 +261,7 @@
             `;
             document.getElementById("htmlCode").innerText = template;
         }
-    
+
         function copyToClipboard() {
             var htmlCode = document.getElementById("htmlCode");
             var range = document.createRange();

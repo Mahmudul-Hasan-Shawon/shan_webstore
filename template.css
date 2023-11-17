@@ -1,0 +1,50 @@
+.bt{
+    background-color: #ffffff;
+    transition: 0.3s;
+    border: 2px solid blueviolet;
+    width: 70px;
+    height: 30px;
+}
+
+.bt:hover{
+    transition: 0.3s;
+    background-color: blueviolet;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    color: white;
+    /* box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+}
+
+
+
+
+
+.ov{
+    padding-top: 80px;
+    padding-left: 100px;
+}
+
+
+.card2{
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.card2:hover{
+    box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.form-control{
+    background-color: rgb(230, 230, 255);
+    border:none;
+
+}
+
+
